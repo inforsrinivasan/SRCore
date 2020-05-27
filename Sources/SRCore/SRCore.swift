@@ -30,4 +30,7 @@ public class SRCore {
         return self.colorFromHexString("006736")
     }
 
+    public static var srSecondaryColor: UIColor {
+        return self.colorFromHexString("003736")
+    }
 }
