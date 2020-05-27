@@ -8,6 +8,11 @@ final class SRCoreTests: XCTestCase {
         XCTAssertEqual(color, .red)
     }
 
+    func testColorAreEqual() {
+        let color = SRCore.colorFromHexString("006736")
+        XCTAssertEqual(color, SRCore.srColor)
+    }
+
     static var allTests = [
         ("testColorRedEqual", testColorRedEqual)
     ]

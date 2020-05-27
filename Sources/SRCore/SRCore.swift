@@ -1,7 +1,7 @@
 
 import UIKit
 
-class SRCore {
+public class SRCore {
 
     /// Allows you to convert a 6 digit hex string into a UIColor instance
     /// - Warning: the '#' symbol is stripped from the beginning of the hex string.
@@ -9,7 +9,7 @@ class SRCore {
     ///   - hexString: A 6 digit hexadecimal string.
     ///   - alpha: alpha value for the color
     /// - Returns: A UIColor defined by the hexString parameter.
-    class func colorFromHexString(_ hexString: String, alpha: CGFloat = 1.0) -> UIColor {
+    internal class func colorFromHexString(_ hexString: String, alpha: CGFloat = 1.0) -> UIColor {
         let r, g, b: CGFloat
         let offset = hexString.hasPrefix("#") ? 1: 0
         let start = hexString.index(hexString.startIndex, offsetBy: offset)
@@ -23,6 +23,11 @@ class SRCore {
             return UIColor(red: r, green: g, blue: b, alpha: alpha)
         }
         return UIColor(red: 0, green: 0, blue: 0, alpha: alpha)
+    }
+
+    /// The primary color for SR apps
+    public static var srColor: UIColor {
+        return self.colorFromHexString("006736")
     }
 
 }
