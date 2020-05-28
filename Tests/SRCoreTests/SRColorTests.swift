@@ -1,21 +1,21 @@
 import XCTest
 @testable import SRCore
 
-final class SRCoreTests: XCTestCase {
+final class SRColorTests: XCTestCase {
 
     func testColorRedEqual() {
-        let color = SRCore.colorFromHexString("FF0000")
+        let color = SRCore.Color.fromHexString("FF0000")
         XCTAssertEqual(color, .red)
     }
 
     func testSRColorAreEqual() {
-        let color = SRCore.colorFromHexString("006736")
-        XCTAssertEqual(color, SRCore.srColor)
+        let color = SRCore.Color.fromHexString("006736")
+        XCTAssertEqual(color, SRCore.Color.srColor)
     }
 
     func testSRSecondayColorAreEqual() {
-        let color = SRCore.colorFromHexString("003736")
-        XCTAssertEqual(color, SRCore.srSecondaryColor)
+        let color = SRCore.Color.fromHexString("003736")
+        XCTAssertEqual(color, SRCore.Color.srSecondaryColor)
     }
 
     static var allTests = [
